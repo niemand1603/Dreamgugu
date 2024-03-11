@@ -23,5 +23,6 @@ async def on_member_remove(member): # 玩家離開伺服器時
 @bot.command() # 指令
 async def ping(ctx): # 指令為ping # context 上下文(頻道等資訊都已經包含在ctx引數中)
     await ctx.send(f"{round(bot.latency*1000)}(ms)") # latency: 延遲(單位:秒) # 1000ms=1s # round() 四捨五入到整數
-     
-bot.run("MTIxNjMxOTczNjQ4NTM4NDMxMg.GRIg28.lZBrmRPeRMWubpm8me9HFikWEX6odYhkXjhvDo") # 啟動bot，run()裡面放token
+
+token = ""
+bot.run(token) # 啟動bot，run()裡面放token
