@@ -24,5 +24,8 @@ async def on_member_remove(member): # 玩家離開伺服器時
 async def ping(ctx): # 指令為ping # context 上下文(頻道等資訊都已經包含在ctx引數中)
     await ctx.send(f"{round(bot.latency*1000)}(ms)") # latency: 延遲(單位:秒) # 1000ms=1s # round() 四捨五入到整數
 
-token = ""
+# 從文字檔案讀取 token (資安問題，不外漏)
+with open('token.txt','r') as file:
+    token = file.read()
+
 bot.run(token) # 啟動bot，run()裡面放token
